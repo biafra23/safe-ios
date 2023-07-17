@@ -106,7 +106,12 @@ class MainTabBarViewController: UITabBarController {
 
         WebConnectionController.shared.attach(observer: self)
 
-        App.shared.snackbar.show(message: "INFURA_KEY: \(App.configuration.services.infuraKey)")
+        App.shared.snackbar.show(message: "infuraKey.isEmpty: \(App.configuration.services.infuraKey.isEmpty)")
+        App.shared.snackbar.show(message: "intercomAppId.isEmpty: \(App.configuration.services.intercomAppId.isEmpty)")
+        App.shared.snackbar.show(message: "intercomApiKey.isEmpty: \(App.configuration.services.intercomApiKey.isEmpty)")
+        App.shared.snackbar.show(message: "walletConnectProjectId.isEmpty: \(App.configuration.walletConnect.walletConnectProjectId.isEmpty)")
+        App.shared.snackbar.show(message: "googleClientId.isEmpty: \(App.configuration.web3auth.googleClientId.isEmpty)")
+        
     }
 
     deinit {
